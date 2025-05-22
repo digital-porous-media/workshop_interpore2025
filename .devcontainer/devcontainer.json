@@ -1,0 +1,20 @@
+{
+    "image": "mcr.microsoft.com/devcontainers/universal:2",
+    "hostRequirements": {
+      "cpus": 2
+    },
+    "waitFor": "onCreateCommand",
+    "updateContentCommand": "python3 -m pip install -r requirements.txt",
+    "postCreateCommand": "sudo apt update && sudo apt install -y libgl1-mesa-glx xvfb && python -c 'import utils; utils.get_datafiles()'",
+    "customizations": {
+      "codespaces": {
+        "openFiles": []
+      },
+      "vscode": {
+        "extensions": [
+          "ms-toolsai.jupyter",
+          "ms-python.python"
+        ]
+      }
+    }
+  }

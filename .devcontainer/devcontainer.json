@@ -5,7 +5,7 @@
     },
     "waitFor": "onCreateCommand",
     "updateContentCommand": "python3 -m pip install -r requirements.txt",
-    "postCreateCommand": "sudo apt update && sudo apt install -y libgl1-mesa-glx xvfb && python -c 'import utils; utils.get_datafiles()'",
+    "postCreateCommand": "sudo apt update && sudo apt install -y libgl1-mesa-glx xvfb unzip && pip install gdown && gdown https://drive.google.com/uc?id=1qmyCt_hpcpV6dJ0dI3YCCGUYwmjX_kLe -O segmented.zip && unzip segmented.zip -d segmented",
     "customizations": {
       "codespaces": {
         "openFiles": []
